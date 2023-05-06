@@ -1,0 +1,16 @@
+{
+  "name": "artist_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d artist_portfolio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://Gruba-K.github.io/shankari_portfolio",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
