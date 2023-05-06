@@ -1,0 +1,516 @@
+/*
+Copyright (c) 2015 Himanshu Softtech.
+------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Artist Sketch Responsive Template - Index Page
+Version:	1.1
+Last change:	21/08/14
+Assigned to:	Themeforest
+Primary use:	Art, Photography, Portfolio 
+-------------------------------------------------------------------*/
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+
+/*iPad landscape · width: 1024px*/
+@media (min-width: 980px) and (max-width: 1024px) {
+.hs_bloging{
+ height: 146px;
+}
+.hs_page_big_thumb{
+  height: 420px;
+}
+.hs_blog_meta{
+font-size:20px;
+}
+ul.hs_blog_menu{
+  margin-left: 0;
+}
+ul.hs_blog_menu li{
+  min-height: 34px;
+  padding: 0px 10px 5px 32px;
+}
+.hs_bloging{
+  height: 117px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+ /* height: 300px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  height: 446px !important;
+}
+.woocommerce .single-product-full div.thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  height: 137px !important;
+}
+p.hs_font_icon_10 {
+  font-size: 56px;
+}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+ul.hs_main_menu_bar{
+  margin: -11px 13px;
+}
+ul.hs_main_menu_bar li a {
+
+}
+.hs_services_title{
+  margin-top: 0px;
+}
+.hs_page_big_thumb{
+  height: 270px;
+}
+
+
+.hs_media_skill{
+width: 100%!important;
+}
+.skill_wrapper{
+  font-size: 170px !important;
+	width: 85px !important;
+	height: 85px !important;
+}
+.prog-contain{
+  width: 170px !important;
+  height: 170px !important;
+  background-size: contain !important;
+}
+.skill_wrapper > .percent_wrapper{
+  top: 26px !important;
+  right: -60px !important;
+  width: 120px !important;
+  height: 120px !important;
+  line-height:120px;
+  text-align:center;
+  background-size: contain !important;
+}
+.skill_wrapper > .percent_wrapper p{
+  margin:0 !important;	
+}
+.skill_wrapper > .slice_wrapper > .pie{
+  border-width: 30px !important;
+  width: 172px !important;
+  height: 172px !important;
+  margin-top: 0px !important;
+  margin-left: -3px !important;
+}
+.skill_wrapper > .gt50.slice_wrapper{
+position:relative !important;
+}
+
+.hs_blog_meta{
+}
+.hs_meta_dig {
+}
+ul.hs_blog_menu{
+	margin-left:0;
+}
+ul.hs_blog_menu li{
+  min-height: 0;
+    padding: 0px 10px 5px 23px !important;
+  background-size: 17px 20px !important;
+}
+ul.hs_social_blog{
+  padding-left: 10px;
+}
+ul.hs_social_blog li a{
+  width: 35px !important;
+  height: 34px !important;
+  background-size: contain !important;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+/* height: 223px !important; */
+}
+.woocommerce .single-product-full div.images div.thumbnails{
+  height: 242px !important;
+}
+.woocommerce .single-product-full div.thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+  height: 214px !important;
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+	height:auto !important;
+}
+.lined{
+font-size: 19px;
+}
+.hs_make_detail > .span4{
+width:50% !important;
+float:left;
+margin:0 !important;
+padding-bottom: 20px;
+}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+.hs_creative_thumb{
+  margin-bottom: 0px;
+}
+.hs_single_thumb{
+  height: 277px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 278px;
+}
+
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+/* height: 607px !important;   */
+}  
+
+}
+
+/*iPhone 6 Plump landscape · width: 736px*/
+@media (max-width: 736px) {
+.hs_slider_mask {
+  height: 308px;
+}
+.hs_latest{
+  height: 678px; 
+}
+.hs_page_big_thumb{
+height: 653px; 
+}
+.hs_single_thumb {
+  height: 309px;
+} 
+.hs_single_thumb {
+  height: 308px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+  /* height: 679px !important; */
+} 
+}
+
+/*iPhone 6 landscape · width: 667px*/
+@media (max-width: 667px) {
+.hs_slider_mask {
+  height: 280px;
+}
+.hs_latest {
+  height: 610px;
+}
+.hs_page_big_thumb {
+  height: 583px;
+}
+}
+
+/*Android (Nexus 4) landscape · width: 600px*/
+@media (max-width: 600px) {
+.hs_slider_mask {
+  height: 245px;
+}
+.hs_latest {
+  height: 541px;
+}
+.hs_page_big_thumb {
+  height: 524px;
+}
+.hs_single_thumb {
+  height: 248px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 247px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+  /* height: 544px !important; */
+}
+}
+
+/*iPhone 5 landscape · width: 568px*/
+@media (max-width: 568px) {
+.hs_slider_client .bxslider_partner li{
+	width:230px !important;
+}
+.hs_creative_thumb p {
+  font-size: 125px;
+  margin-bottom: 35px;
+}
+.hs_slider_mask {
+  height: 232px;
+}
+.hs_latest {
+  height: 510px;
+}
+.hs_page_big_thumb {
+  height: 490px;
+}
+.hs_single_thumb {
+  height: 231px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 230px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+  /* height: 511px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 502px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 155px !important; */
+}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.hs_slider_mask {
+  /* height: 159px; */
+}
+.hs_latest {
+  height: 423px;
+}
+.hs_page_big_thumb {
+  height: 407px;
+}
+.hs_single_thumb {
+  height: 191px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 193px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest{
+  /* height: 423px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 415px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 127px !important; */
+}
+.hs_sorting_portfolio .hs_latest{
+height: 420px;
+}
+}
+
+/*iPhone 6 Plump portrait · width: 414px*/
+@media (max-width: 414px) { 
+.hs_latest {
+  height: 340px;
+}
+.hs_slider_mask {
+  height: 130px;
+}
+.hs_page_big_thumb {
+  height: 324px;
+}
+.hs_single_thumb {
+  height: 154px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 154px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 339px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 331px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 102px !important; */
+}
+.hs_sorting_portfolio .hs_latest {
+  height: 340px;
+}
+}
+
+/*Android (Nexus 4) portrait · width: 384px*/
+@media (max-width: 384px) {
+.hs_slider_mask {
+  height: 117px;
+}
+.hs_latest {
+  height: 309px;
+}
+.hs_page_big_thumb {
+  height: 299px;
+}
+.hs_single_thumb {
+  height: 140px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 141px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 311px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 303px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 93px !important; */
+}
+.hs_sorting_portfolio .hs_latest {
+  height: 310px;
+}
+}
+
+/*iPhone 6 portrait · width: 375px*/
+@media (max-width: 375px) { 
+.hs_slider_mask {
+  height: 115px;
+}
+.hs_latest {
+  height: 302px;
+}
+.hs_page_big_thumb {
+  height: 291px;
+}
+.artist_sidebar_main .hs_single_thumb {
+  height: 137px;
+}
+.hs_single_thumb {
+  height: 136px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 302px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 294px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 90px !important; */
+}
+.hs_sorting_portfolio .hs_latest {
+  height: 302px;
+}
+}
+
+/*iPhone 5 portrait · width: 320px*/
+@media (max-width: 320px) {
+.hs_page_big_thumb {
+  height: 239px;
+}
+.hs_single_thumb {
+  height: 113px;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 249px !important; */
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 241px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 74px !important; */
+}
+.hs_sorting_portfolio .hs_latest {
+  height: 249px;
+}
+.hs_main_slider{
+	width: 97%!important;
+	margin-left: 0%!important;
+}
+.hs_slider_mask{
+	height: 110px;
+}
+.lined{
+	font-size: 20px;
+}
+.lined:after{
+	background: url(../images/seprator.png) 7px NO-REPEAT;
+	background-size: 100% 45%;
+}
+.hs_latest {
+  height: 249px;
+}
+.hs_bloging {
+  height: 249px;
+}	
+.hs_slider_testo .bx-wrapper .bx-controls-direction .bx-prev {
+  margin-top: -11%;
+}
+.hs_slider_testo .bx-wrapper .bx-controls-direction .bx-prev:hover {
+  margin-top: -19%;
+}
+.hs_slider_testo .bx-wrapper .bx-controls-direction .bx-next {
+  margin-top: -12%;
+}
+.hs_slider_testo .bx-wrapper .bx-controls-direction .bx-next:hover{
+  margin-top: -12%;
+}
+.hs_client_logo img {
+  margin-left: -64px;
+}
+.hs_slider_client .bx-wrapper .bx-controls-direction .bx-prev{
+	width: 50px;
+	height: 50px;
+	margin-left: 5%!important;
+	margin-top: -7%!important;
+}
+.hs_slider_client .bx-wrapper .bx-controls-direction .bx-prev:hover{
+	margin-left: 5%!important;
+	margin-top: -7%!important;
+}
+.hs_slider_client .bx-wrapper .bx-controls-direction .bx-next {
+  width: 50px;
+  height: 50px;
+  margin-right: 1%!important;
+  margin-top: -7%!important;
+}
+.hs_slider_client .bx-wrapper .bx-controls-direction .bx-next:hover{
+  margin-right: 1%!important;
+  margin-top: -7%!important;
+}
+
+}
+
+/*Crappy Android portrait · width: 240px*/
+@media (max-width: 240px) { 
+.hs_slider_mask {
+  height: 77px;
+}
+.hs_latest {
+  height: 173px;
+}
+.lined:after{
+  background-size: 114% 12%;
+}
+.hs_bloging {
+  height: 174px;
+}
+.hs_page_big_thumb {
+  height: 167px;
+}
+.hs_single_thumb {
+  height: 79px;
+}
+.artist_img_view_large{
+font-size: 14px;
+  margin-top: -8px;
+}
+.artist_img_view_large span{
+  font-size: 25px;
+}
+.hs_post_related{
+  min-height: 220px !important;
+}
+.shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 173px !important; */
+}
+span.artist_onsale{
+  width: 52px !important;
+  height: 52px !important;
+  line-height: 54px !important;
+    background-size: contain !important;
+	  font-size: 14px !important;
+}
+.woocommerce .woocommerce-ordering select{
+  width: 100%;
+}
+.artist_pager_navigation li a{
+	display:inline-block;
+}
+.single-product .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 165px !important; */
+}
+.single-product .thumbnails .shop_product .shop_main_latest .shop_port_thumb .shop_latest {
+  /* height: 51px !important; */
+}
+.woocommerce .single-product-full div.images div.thumbnails {
+  height: 73px !important;
+}
+.hs_sorting_portfolio .hs_latest {
+  height: 173px;
+}
+}

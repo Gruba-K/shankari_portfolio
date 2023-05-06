@@ -1,0 +1,132 @@
+#filters {
+	margin: 1%;
+	padding: 0;
+	list-style: none;
+    position: initial;
+    box-shadow: none;
+	width:auto;
+	border:none;
+}
+#filters li {
+	float: left;
+	width:auto;
+	padding:0px 5px !important;
+}
+#filters li:last-child {
+	padding-right:0px !important;
+}
+#filters li span {
+	display: block;
+	padding: 5px 20px;
+	text-decoration: none;
+	color: #666;
+	cursor: pointer
+}
+#filters li span.active {
+	background: #e95a44;
+	color: #fff
+}
+#portfoliolist .portfolio {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width: 32%;
+	margin: 3px;
+	display: none;
+	float: left;
+	overflow: hidden
+}
+.portfolio-wrapper {
+	overflow: hidden;
+	position: relative!important;
+	background: #666;
+	cursor: pointer
+}
+.portfolio img {
+	width: 100%;
+	height: 100%
+}
+.portfolio .label {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	bottom: -40px
+}
+.portfolio .label-bg {
+	background: #e95a44;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.portfolio .label-text {
+	color: #fff;
+	position: relative;
+	z-index: 500;
+	padding: 5px 8px
+}
+.portfolio .text-category {
+	display: block;
+	font-size: 9px
+}ul.hs_pf_fliter {	float: right;	list-style:none;}.artist_home ul.hs_pf_fliter {	margin-right:0px;}ul.hs_pf_fliter li {	float: left;	padding: 5px 10px;	position: relative;}ul.hs_pf_fliter li a {	font-size: 20px;	color: #737373;	text-transform: capitalize;	font-weight: 900;	cursor:pointer;}ul.hs_pf_fliter li a.active,ul.hs_pf_fliter li a:hover {	color: #000}
+@media only screen and (max-width:767px) {
+.container {
+	/* width: 95% */
+}
+#portfoliolist .portfolio {
+	width: 48%;
+}
+#ads {
+	display: none
+}
+}
+@media only screen and (min-width:480px) and (max-width:767px) {
+.container {
+	width: 100%
+}
+#ads {
+	display: none
+}
+}
+@media (max-width:480px) {
+#portfoliolist .portfolio {
+	width: 100%;
+}
+}
+
+.container:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.clearfix:after,
+.clearfix:before,
+.row:after,
+.row:before {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+.clearfix:after,
+.row:after {
+	clear: both
+}
+.clearfix,
+.row {
+	zoom: 1
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+

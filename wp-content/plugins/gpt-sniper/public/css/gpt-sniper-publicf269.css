@@ -1,0 +1,628 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ :root {
+    --gpt-primary: #086add;
+    --gpt-title-color: #0b2239;
+    --gpt-font-color: #374957;
+    --gpt-whiter: #ffffff;
+    --gpt-border-color: #c0d1e4;
+    --gpt-danger: #cb2027;
+    --gpt-transition: all .3s;
+}
+
+.gpt-chatbot-wrap * {
+    outline: 0 !important;
+}
+
+
+/* Button*/
+
+.gpt-btn {
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+    color: var(--gpt-whiter);
+    background-color: var(--gpt-primary);
+    padding: 12px 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+
+.gpt-btn:hover {
+    color: var(--gpt-whiter);
+}
+
+.gpt-btn:before {
+    background-color: var(--gpt-whiter);
+    content: "";
+    height: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    transition: all 1.6s cubic-bezier(.19, 1, .22, 1);
+    width: 100px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.gpt-btn:hover:before {
+    transition: all 1.3s cubic-bezier(.19, 1, .22, 1);
+    opacity: .25;
+    transform: scale(1);
+}
+
+.gpt-btn:focus {
+    box-shadow: none;
+    color: var(--gpt-whiter) !important;
+    background-color: var(--gpt-primary) !important;
+    text-decoration: none !important;
+}
+
+
+/* Radio Button */
+
+.gpt-radio-btn input {
+    position: absolute;
+    left: -9999999px;
+    opacity: 0;
+}
+
+.gpt-radio-btn label {
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition: var(--gpt-transition);
+    -moz-transition: var(--gpt-transition);
+    -ms-transition: var(--gpt-transition);
+    -o-transition: var(--gpt-transition);
+    transition: var(--gpt-transition);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.gpt-radio-btn label:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0px;
+    border-radius: 30px;
+    -webkit-transition: var(--gpt-transition);
+    -moz-transition: var(--gpt-transition);
+    -ms-transition: var(--gpt-transition);
+    -o-transition: var(--gpt-transition);
+    transition: var(--gpt-transition);
+}
+
+.gpt-radio-btn input:checked+label {
+    color: #99ca2b;
+}
+
+.gpt-radio-btn input+label span {
+    width: 50px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: #e2e6ff;
+    display: inline-block;
+    position: relative;
+}
+
+.gpt-radio-btn input+label span:after {
+    top: 0;
+    width: 20px;
+    height: 19px;
+    background: var(--gpt-whiter);
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    z-index: 0;
+    bottom: 0;
+    margin: auto;
+    left: 3px;
+    -webkit-transition: var(--gpt-transition);
+    -moz-transition: var(--gpt-transition);
+    -ms-transition: var(--gpt-transition);
+    -o-transition: var(--gpt-transition);
+    transition: var(--gpt-transition);
+}
+
+.gpt-radio-btn input:checked+label span:after {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: var(--gpt-whiter);
+}
+
+.gpt-radio-btn input:checked+label span {
+    background: var(--gpt-primary);
+}
+
+
+/* ChatBoat */
+
+.gpt-chatbot-wrap {
+    background: #f5f5f5;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px 20px 20px;
+}
+
+.gpt-chatbot-message .gpt-input-wrapper {
+    margin: 0;
+    display: flex;
+}
+
+.gpt-chatbot-message .gpt-input-wrapper input {
+    width: calc(100% - 100px);
+    border-radius: 6px 0px 0px 6px;
+    font-size: 14px;
+    min-height: 45px;
+    border: 1px solid var(--gpt-border-color);
+    padding: 0 20px;
+    max-width: 100%;
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 3%);
+    background-color: #fdfdff;
+}
+
+.gpt-chatbot-message .gpt-input-wrapper input:focus {
+    border-color: var(--gpt-primary);
+    box-shadow: none;
+}
+
+.gpt-chatbot-message .gpt-input-wrapper .gpt-btn {
+    border-radius: 0px 6px 6px 0px;
+}
+
+.gpt-chatbot-message .gpt-input-wrapper svg {
+    height: 15px;
+    display: inline-block;
+    margin: 0 0 2px 10px;
+}
+
+.gpt-chatbot-content {
+    font-size: 14px;
+}
+
+.gpt-chatbot-content ul {
+    height: 400px;
+    margin: 0 0 10px;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 6px 6px 6px 6px;
+}
+
+
+/* Chat Typing CSS  */
+.gpt-chatbot-content {
+    max-height: 260px;
+    overflow: hidden auto;
+    padding: 10px 10px;
+}
+.gpt-chatbot-content::-webkit-scrollbar {
+    width: 6px;
+}
+.gpt-chatbot-content::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+.gpt-chatbot-content::-webkit-scrollbar-thumb {
+    background-color: var(--gpt-primary);
+}
+.gpt_chat_input {
+    text-align: right;
+}
+
+.gpt-chatbot-content .gpt_chat_msg,
+.gpt-chatbox-messages .gpt_chat_msg {
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.gpt-chatbot-content .gpt_chat_msg>span,
+.gpt-chatbox-messages .gpt_chat_msg>span {
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 15%);
+    background: var(--gpt-whiter);
+    box-shadow: 0 0 30px rgb(0 0 0 / 6%);
+    display: inline-block;
+}
+
+.gpt-chatbot-content .gpt_chat_msg.gpt_chat_input>span,
+.gpt-chatbox-messages .gpt_chat_msg.gpt_chat_input>span {
+    border-radius: 10px 10px 0 10px;
+}
+
+.gpt-chatbot-content .gpt_chat_msg>span small,
+.gpt-chatbox-messages .gpt_chat_msg>span small {
+    color: var(--gpt-primary);
+    text-align: left;
+    display: block;
+}
+/**/
+.gpt-chatbot-wrap.gpt-chatbot-right.gpt-chat-has-title, .gpt-chatbot-wrap.gpt-chatbot-left.gpt-chat-has-title {
+    padding: 0;
+}
+.gpt-chatbot-wrap.gpt-chatbot-right.gpt-chat-has-title .gpt-form-title, .gpt-chatbot-wrap.gpt-chatbot-left.gpt-chat-has-title .gpt-form-title {
+    background: var(--gpt-primary);
+    border-radius: 6px 6px 0 0;
+    margin: 00;
+    padding: 15px 20px 8px;
+    color: var(--gpt-whiter);
+}
+
+/**/
+
+.gpt-typing-balls span {
+    width: 6px;
+    height: 6px;
+    background-color: var(--gpt-primary);
+    display: inline-block;
+    margin: 1px;
+    border-radius: 50%;
+}
+
+.gpt-typing-balls span:nth-child(1) {
+    -webkit-animation: bounce 1s infinite;
+    animation: bounce 1s infinite;
+}
+
+.gpt-typing-balls span:nth-child(2) {
+    -webkit-animation: bounce 1s infinite 0.2s;
+    animation: bounce 1s infinite 0.2s;
+}
+
+.gpt-typing-balls span:nth-child(3) {
+    -webkit-animation: bounce 1s infinite 0.4s;
+    animation: bounce 1s infinite 0.4s;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.gpt-chatbot-wrap .gpt-form-title {
+    font-size: 18px;
+    color: #222;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+
+/* ChatBoat Position  */
+
+.gpt-chatbot-wrap.gpt-chatbot-left {
+    position: fixed;
+    left: 40px;
+    bottom: 100px;
+    min-width: 400px;
+    max-width: 450px !important;
+    width: 100%;
+    margin: 0;
+    z-index: 999;
+    box-shadow: 0 0 30px rgb(0 0 0 / 6%);
+    background: #ffffff;
+}
+
+.gpt-chatbot-wrap.gpt-chatbot-right {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    min-width: 400px;
+    max-width: 450px !important;
+    width: 100%;
+    margin: 0;
+    z-index: 999;
+    box-shadow: 0 0 30px rgb(0 0 0 / 6%);
+    background: #ffffff;
+}
+
+
+/* Boat Icon */
+
+.gpt-chatbot-wrap.gpt-chatbox-hide {
+    padding: 0;
+}
+
+.gpt-chatbot-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gpt-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+    justify-content: center;
+    align-items: center;
+    color: var(--gpt-whiter);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    z-index: 9;
+    display: none;
+}
+
+
+/* .gpt-chatbot-icon:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background: var(--vp-primary);
+    z-index: -1;
+    border-radius: 100%;
+    box-shadow: 0 0 0 15px rgb(74 210 149 / 80%), 0 0 0 30px rgb(74 210 149 / 60%), 0 0 0 45px rgb(74 210 149 / 40%);
+    animation: modalRipple 2s infinite;
+} */
+
+.gpt-chatbot-icon-inner {
+    position: relative;
+    background: var(--gpt-primary);
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 50%;
+}
+
+@keyframes modalRipple {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+    10% {
+        opacity: 1
+    }
+    90% {
+        opacity: 0
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.gpt-chatbot-icon svg {
+    height: 40px;
+    display: inline-block;
+    width: 40px;
+    fill: var(--gpt-whiter);
+}
+
+.gpt-chatbot-wrap.gpt-chatbot-left .gpt-chatbot-icon {
+    display: inline-flex;
+    left: 20px;
+}
+
+.gpt-chatbot-wrap.gpt-chatbot-right .gpt-chatbot-icon {
+    display: inline-flex;
+    right: 20px;
+}
+
+
+/* chat boat close  */
+
+.gpt-chatbot-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: #ff4040;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    display: inline-flex;
+    border-radius: 50%;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    border: 2px solid #ff8484;
+    box-shadow: 0 0 20px rgb(0 0 0 / 24%);
+}
+
+.gpt-chatbot-wrap.gpt-chatbot-left .gpt-chatbot-close {
+    display: inline-flex;
+}
+
+.gpt-chatbot-wrap.gpt-chatbot-right .gpt-chatbot-close {
+    display: inline-flex;
+}
+.gpt-shortcode, .gpt-faq-wrapper{
+	position:relative;	
+}
+
+/* Loader  */
+.gpt-preloader, .gpt-loader {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255 255 255 / 0.9);
+     display: none; 
+}
+.gpt-preloader img{
+    display:block;
+    animation:left-right 2s linear infinite;
+}
+@keyframes left-right {
+    0% {}
+    50% { transform: translateX(30px) }
+    100% {}
+}
+.gpt-preloader span {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    color: var(--gpt-title-color);
+    margin: 0 0 0 10px;
+}
+.gpt-openai-images:first-child {
+    margin-top: 20px;
+}
+.gpt-openai-images {
+    position: relative;
+    margin-bottom: 15px;
+}
+.gpt-openai-images img {
+    width: 100%;
+}
+.gpt-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* FAQ */
+
+.gpt-faq-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.gpt-input-wrapper label {
+    margin-bottom: 5px;
+}
+
+.gpt-inputwith-btn {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gpt-inputwith-btn input {
+    width: calc(100% - 130px);
+    max-width: calc(100% - 130px);
+    border-radius: 6px 0 0 6px !important;
+}
+
+.gpt-inputwith-btn input:focus {
+    border-color: var(--gpt-primary);
+}
+
+.gpt-inputwith-btn .gpt-btn {
+    border-radius: 0 6px 6px 0 !important;
+}
+
+.gpt-faq .gpt-quetion {
+    margin: 0;
+    font-weight: 600;
+}
+
+.gpt-faq .gpt-anwsers {
+    margin: 0;
+}
+
+.gpt-faq-container .gpt-input-wrapper {
+    margin: 0 0 20px;
+}
+
+.gpt-faq {
+    margin: 0 0 30px;
+    padding: 20px 20px;
+    border: 1px solid #eaebec;
+    border-radius: 8px;
+}
+
+.gpt-faq .gpt-quetion {
+    color: var(--gpt-title-color);
+}
+
+.gpt-footer-widget .gpt-faq p {
+    color: #ffffff;
+}
+
+
+/* Img / Content Generator */
+
+.gpt-input-wrapper {
+    position: relative;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.gpt-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.gpt-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.gpt-input-wrapper textarea {
+    min-height: 150px;
+    padding: 20px;
+}
+.toast.toast-success {
+    background: #51a351;
+    opacity:1;
+}
+.toast.toast-error {
+    background: #BD362F;
+    opacity:1;
+}
+@media(max-width:375px){
+    .gpt-col-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
